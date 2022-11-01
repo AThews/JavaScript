@@ -22,12 +22,12 @@
 <body>
     <h1>Olá, mundo!</h1>
     <script>
-        var aviso = "Minha primeira mensagem!"
-        let confirma = 'Está gostando de JS?'
-        let nome = 'Qual seu nome?'
-        alert(aviso)
-        window.confirm(confirma)
-        window.prompt(nome)
+        var n1 = Number.parseFloat(window.prompt("Digite um numero: "))
+        var n2 = Number.parseFloat(window.prompt("Digite outro numero: "))
+        var resp = n1 + n2
+
+        window.alert(`A soma de ${n1} e ${n2} é igual a: ${resp}`)
+
     </script>
 </body>
 
