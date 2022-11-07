@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        html {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: gray;
+        }
+
+        input#ipais {
+            border: 1px solid black;
+            width: 10em;
+            height: 2em;
+            border-radius: .8em;
+            padding: 2px;
+            background-color: white;
+        }
+
+        div#resp {
+            margin: 2em;
+            width: 15em;
+            height: 2em;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nacionalidades</h1>
+    De qual País você é ? :
+    <input type="text" id="ipais">
+
+    <input type="button" value="enviar" id="ienvio">
+
+    <div id="resp"></div>
+
+    <script>
+        ienvio.addEventListener('click', clicar)
+
+        function clicar() {
+            var pais = document.getElementById('ienvio')
+            var botao = document.getElementById('ienvio')
+            var respos = document.querySelector('div#resp')
+
+            if (pais == 'Brasil') {
+                respos.innerHTML = 'Você é Brasileiro !!'
+            } else {
+                respos.innerHTML = 'Você é estrangeiro!!'
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

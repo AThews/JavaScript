@@ -24,20 +24,22 @@
 </head>
 
 <body>
-    <div id="area" onclick="clicar()" 
-    onmouseenter="entrar()"
-    onmouseout="saiu()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
-        function clicar() {
-            let area = document.querySelector('div#area')
+        let area = Document.querySelector('div#area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', saiu)
+
+        function clicar(){
             area.innerHTML = 'Clicou!'
             area.style.background = 'darkred'
         }
 
-        function entrar( ){
+        function entrar(){
             area.innerHTML = 'Entrou!'
             area.style.background = 'blue'
         }
